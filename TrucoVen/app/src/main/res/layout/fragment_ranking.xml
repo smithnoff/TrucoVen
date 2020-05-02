@@ -7,6 +7,30 @@
     android:background="@drawable/bg_game"
     tools:context=".ui.ranking.RankingFragment">
 
+    <com.google.android.material.tabs.TabLayout
+        android:background="@color/primaryDarkColor"
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        app:tabTextColor="@color/primaryTextColor"
+        app:tabSelectedTextColor="@color/colorAccent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mundial" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_ranking"
         android:layout_width="0dp"
@@ -14,12 +38,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="279dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
