@@ -9,7 +9,13 @@
         android:id="@+id/navigation_home"
         android:name="com.skynoff.trucoven.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_gameTableFragment"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/navigation_home"
+            app:destination="@id/gameTableFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_ranking"
@@ -22,4 +28,9 @@
         android:name="com.skynoff.trucoven.ui.profile.ProfileFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/gameTableFragment"
+        android:name="com.skynoff.trucoven.ui.table.GameTableFragment"
+        tools:layout="@layout/fragment_game_table"
+        android:label="GameTableFragment" />
 </navigation>
