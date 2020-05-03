@@ -10,10 +10,19 @@
 
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -24,8 +33,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/secondlayer">
+                android:background="@drawable/secondlayer"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -39,8 +48,8 @@
                         android:layout_height="130dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:src="@drawable/ic_person_black_24dp"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        android:src="@drawable/ic_person_black_24dp" />
 
 
                     <TextView
@@ -67,100 +76,104 @@
                         android:layout_gravity="right"
                         android:layout_marginTop="-40dp"
                         android:layout_marginBottom="0px"
-                        android:src="@drawable/trucomano"
-                        android:contentDescription="TODO" />
+                        android:contentDescription="TODO"
+                        android:src="@drawable/trucomano" />
 
                 </LinearLayout>
-
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
+                    android:background="@drawable/secondlayer"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal"
                     android:paddingLeft="10dp"
                     android:paddingTop="15dp"
-                    android:paddingBottom="0dp"
-                    android:gravity="center_horizontal"
-                    android:background="@drawable/secondlayer">
+                    android:paddingBottom="0dp">
 
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_2k"
+                            android:textColor="@color/txtColorNombres"
                             android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/txtColorNombres"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/ganadas"
+                            android:textColor="@color/txtColorNombres"
                             android:textSize="20sp"
-                            android:textStyle="normal"
-                            android:textColor="@color/txtColorNombres"/>
+                            android:textStyle="normal" />
 
                     </LinearLayout>
+
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        />
+                        android:layout_marginRight="10dp" />
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_1k"
+                            android:textColor="@color/txtColorNombres"
                             android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/txtColorNombres"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/perdidas"
+                            android:textColor="@color/txtColorNombres"
                             android:textSize="20sp"
-                            android:textStyle="normal"
-                            android:textColor="@color/txtColorNombres"/>
+                            android:textStyle="normal" />
 
                     </LinearLayout>
+
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        />
+                        android:layout_marginRight="10dp" />
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_1k"
+                            android:textColor="@color/txtColorNombres"
                             android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/txtColorNombres"/>
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/empates"
+                            android:textColor="@color/txtColorNombres"
                             android:textSize="20sp"
-                            android:textStyle="normal"
-                            android:textColor="@color/txtColorNombres"/>
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -170,32 +183,32 @@
             </LinearLayout>
 
             <LinearLayout
-                android:paddingTop="50dp"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp">
+                android:layout_marginLeft="120dp"
+                android:orientation="vertical"
+                android:paddingTop="50dp">
 
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/nick"
                         android:textColor="@color/txtColorNombres"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="@string/nick" />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/eltrucazo"
                         android:textColor="@color/txtColorNombres"
                         android:textSize="18sp"
-                        android:textStyle="normal"
-                        android:text="@string/eltrucazo" />
+                        android:textStyle="normal" />
 
                 </LinearLayout>
 
@@ -205,26 +218,27 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp" />
+
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/email"
                         android:textColor="@color/txtColorNombres"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="@string/email" />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/contacto_trucazo_cl"
                         android:textColor="@color/txtColorNombres"
                         android:textSize="18sp"
-                        android:textStyle="normal"
-                        android:text="@string/contacto_trucazo_cl" />
+                        android:textStyle="normal" />
 
                 </LinearLayout>
 
@@ -234,26 +248,27 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp" />
+
                 <LinearLayout
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/n_mero"
                         android:textColor="@color/txtColorNombres"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:text="@string/n_mero" />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/_569000000"
                         android:textColor="@color/txtColorNombres"
                         android:textSize="18sp"
-                        android:textStyle="normal"
-                        android:text="@string/_569000000" />
+                        android:textStyle="normal" />
 
                 </LinearLayout>
 
