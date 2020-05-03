@@ -3,4 +3,18 @@
     <string name="title_home">Truco</string>
     <string name="title_dashboard">Ranking</string>
     <string name="title_notifications">Perfil</string>
+    <string name="_569000000">+569000000</string>
+    <string name="n_mero">Número</string>
+    <string name="contacto_trucazo_cl">contacto@trucazo.cl</string>
+    <string name="email">Email</string>
+    <string name="eltrucazo">Eltrucazo</string>
+    <string name="nick">Nick</string>
+    <string name="empates">Empates</string>
+    <string name="_1k">1k</string>
+    <string name="perdidas">Perdidas</string>
+    <string name="ganadas">Ganadas</string>
+    <string name="_2k">2k</string>
+    <string name="direcci_n">Dirección</string>
+    <string name="nombre_y_apellido">Nombre y Apellido</string>
+    <string name="todo">TODO</string>
 </resources>
