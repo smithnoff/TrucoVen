@@ -8,4 +8,7 @@
     <color name="primaryColor">#7f0000</color>
     <color name="primaryLightColor">#b53d2a</color>
     <color name="primaryDarkColor">#4e0000</color>
+
+    <color name="txtColorNombres">#C3BFBF</color>
+    <color name="txtColorSecondlayer">#1976d2</color>
 </resources>
