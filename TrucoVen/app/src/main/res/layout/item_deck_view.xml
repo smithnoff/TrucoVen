@@ -13,7 +13,7 @@
         app:flipDuration="400"
         app:flipEnabled="true"
         app:flipFrom="right"
-        app:flipOnTouch="true"
+        app:flipOnTouch="false"
         app:flipType="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,23 +22,27 @@
 
 
         <FrameLayout
-            android:layout_margin="16dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_game" />
+            android:background="#000000" >
+            <ImageView
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_game"/>
+        </FrameLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="16dp">
+            android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/card_up_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -50,7 +54,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/card_down_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
@@ -63,17 +67,19 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="118dp"
-                    android:layout_marginLeft="118dp"
-                    android:layout_marginEnd="133dp"
-                    android:layout_marginRight="133dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/card_pint"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/card_down_number"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_up_number"
                     tools:srcCompat="@tools:sample/avatars" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
