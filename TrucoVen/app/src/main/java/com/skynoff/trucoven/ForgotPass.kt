@@ -1,13 +1,12 @@
-package com.skynoff.trucoven.ui
+package com.skynoff.trucoven
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.skynoff.trucoven.R
 
-class SingUpActivity : AppCompatActivity() {
+class ForgotPass : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sing_up)
+        setContentView(R.layout.activity_forgot_pass2)
     }
 }

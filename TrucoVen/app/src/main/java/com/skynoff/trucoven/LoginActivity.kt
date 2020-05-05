@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.skynoff.trucoven.ui.SingUpActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -15,6 +14,11 @@ class LoginActivity : AppCompatActivity() {
 
     fun OpenSingUpActivity(view: View) {
         startActivity(Intent(this, SingUpActivity::class.java))
+
+    }
+
+    fun OpenForgotPass(view: View) {
+        startActivity(Intent(this, ForgotPass::class.java))
 
     }
 }

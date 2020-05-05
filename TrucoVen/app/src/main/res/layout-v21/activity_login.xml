@@ -148,7 +148,8 @@
                         android:text="@string/sing_up"
                         android:textColor="@color/primaryTextColor"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -161,7 +162,9 @@
                         android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        tools:ignore="RelativeOverlap" />
+                        tools:ignore="RelativeOverlap"
+                        android:onClick="OpenForgotPass"
+                        />
                 </RelativeLayout>
 
 

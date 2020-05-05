@@ -16,7 +16,11 @@
     <string name="nombre">Nombre</string>
 
     <string name="password">Password</string>
-    <string name="email">Email</string>
+
     <string name="trucazooo">Trucazooo</string>
+    <string name="no_recuerdas_tu_contrase_a">¿No recuerdas tu contraseña?</string>
+    <string name="no_te_preocupes_nos_pasa_a_todos_ingresa_tu_email_y_te_ayudaremos">No te preocupes nos pasa a todos, ingresa tu email y te ayudaremos</string>
+    <string name="recuperar">Recuperar</string>
+    <string name="email">Email</string>
 
 </resources>
