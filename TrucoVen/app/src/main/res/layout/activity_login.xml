@@ -1,161 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/image1"
-        android:contentDescription="@string/todo" />
-
-    <TextView
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:text="@string/trucoven"
-        android:textColor="#FFFFFF"
-        android:textSize="38sp"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom">
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:contentDescription="Carta"
-            android:src="@drawable/image3" />
-
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:backgroundTint="@android:color/transparent"
-            android:hint="Email"
+            android:orientation="vertical"
+            android:background="@drawable/image5"
+            >
 
-            android:inputType="textEmailAddress"
-            android:padding="15dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="116dp"
+                android:text="@string/trucazooo"
+                android:textColor="#ffffff"
+                android:textSize="38sp"
+                android:textStyle="bold" />
 
-            android:textColor="#494949"
-            android:autofillHints="" />
-            
-            <RelativeLayout
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/image3"
+
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:background="#494949"
-                android:layout_marginTop="4dp"
-
-                >
-
-            </RelativeLayout>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:backgroundTint="@android:color/transparent"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:padding="15dp"
 
-            android:textColor="#494949" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:background="#494949"
-            android:layout_marginTop="4dp"
 
-            >
+                <EditText
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:autofillHints=""
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="15dp"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
 
-        </RelativeLayout>
+                    />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#ffffff">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:fabCustomSize="80dp"
-                app:backgroundTint="@color/design_default_color_primary"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="20dp"
-                android:layout_centerInParent="true"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentRight="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sing_in"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="#191919"
-                android:layout_centerInParent="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="30dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="30dp" />
-            
-            </RelativeLayout>
-        
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="@string/sing_up"
-               android:textSize="18sp"
-               android:textStyle="bold"
-               android:padding="15dp"
-               android:layout_centerInParent="true"
-               android:layout_marginLeft="30dp"
-               android:layout_alignParentLeft="true"
-               android:layout_marginStart="30dp"
-               android:layout_alignParentStart="true" />
+                </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/forgot_password"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:padding="15dp"
-                android:layout_centerInParent="true"
-                android:layout_marginRight="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginEnd="30dp"
-                android:layout_alignParentEnd="true" />
-            
-        </RelativeLayout>
+                <EditText
+                    android:id="@+id/Pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:autofillHints=""
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/password"
+                    android:inputType="textWebPassword"
+                    android:padding="15dp"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="30dp"
+
+                    android:layout_marginEnd="30dp"
+                    android:background="#ffffff">
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        app:backgroundTint="@color/design_default_color_background"
+                        app:fabCustomSize="80dp"
+                        tools:ignore="RelativeOverlap"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="30dp"
+                        android:text="@string/sing_in"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="30dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ExtraText">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="30dp"
+                        android:onClick="OpenSingUpActivity"
+                        android:padding="15dp"
+                        android:text="@string/sing_up"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="30dp"
+                        android:padding="15dp"
+                        android:text="@string/forgot_password"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp" />
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
 
         </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

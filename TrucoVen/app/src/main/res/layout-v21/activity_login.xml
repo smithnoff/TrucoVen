@@ -1,169 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            android:scaleType="centerCrop"
-            android:src="@drawable/image5" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="116dp"
-            android:text="@string/trucoven"
-            android:textColor="#FFFFFF"
-            android:textSize="38sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/image5"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="116dp"
+                android:text="@string/trucazooo"
+                android:textColor="#ffffff"
+                android:textSize="38sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:layout_width="100dp"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center"
-                android:contentDescription="@string/carta"
-                android:src="@drawable/image3" />
 
-            <EditText
-                android:id="@+id/Email"
+                android:src="@drawable/image3"
+
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:autofillHints=""
-                android:backgroundTint="@android:color/transparent"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress"
-                android:padding="15dp"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-
-                />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="30dp"
-                android:background="#494949"
-
-                >
-
-            </RelativeLayout>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
 
-            <EditText
-                android:id="@+id/Pass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:autofillHints=""
-                android:backgroundTint="@android:color/transparent"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:padding="15dp"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="30dp"
-                android:background="#494949"
 
-                >
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="20dp"
-                    app:backgroundTint="@color/design_default_color_background"
-                    app:fabCustomSize="80dp"
-                    tools:ignore="RelativeOverlap" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerInParent="true"
                     android:layout_marginStart="30dp"
-                    android:text="@string/sing_in"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="ExtraText">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginStart="30dp"
-                    android:onClick="OpenSingUpActivity"
-                    android:padding="15dp"
-                    android:text="@string/sing_up"
-                    android:textColor="@color/primaryTextColor"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerInParent="true"
                     android:layout_marginEnd="30dp"
+                    android:autofillHints=""
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
                     android:padding="15dp"
-                    android:text="@string/forgot_password"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    tools:ignore="RelativeOverlap" />
-            </RelativeLayout>
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="#ffffff">
+
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/Pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:autofillHints=""
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/password"
+                    android:inputType="textWebPassword"
+                    android:padding="15dp"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="30dp"
+
+                    android:layout_marginEnd="30dp"
+                    android:background="#ffffff">
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        app:backgroundTint="@color/design_default_color_background"
+                        app:fabCustomSize="80dp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="30dp"
+                        android:text="@string/sing_in"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ExtraText">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="30dp"
+                        android:onClick="OpenSingUpActivity"
+                        android:padding="15dp"
+                        android:text="@string/sing_up"
+                        android:textColor="@color/primaryTextColor"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="30dp"
+                        android:padding="15dp"
+                        android:text="@string/forgot_password"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap" />
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

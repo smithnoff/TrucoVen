@@ -6,7 +6,7 @@
     <string name="bienvenido">Bienvenido</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="sing_in">Sing In</string>
-    <string name="password">Password</string>
+
     <string name="sing_up">Sing Up</string>
     <string name="trucoven">TrucoVen</string>
     <string name="todo">TODO</string>
@@ -14,6 +14,9 @@
 
     <string name="Registrarse">Registrarse</string>
     <string name="nombre">Nombre</string>
+
+    <string name="password">Password</string>
     <string name="email">Email</string>
+    <string name="trucazooo">Trucazooo</string>
 
 </resources>

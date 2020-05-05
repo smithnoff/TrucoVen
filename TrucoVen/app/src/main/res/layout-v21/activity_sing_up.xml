@@ -12,12 +12,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            android:scaleType="centerCrop"
-            android:src="@drawable/image5" />
+            android:background="@drawable/image5"
+            android:orientation="vertical"
+
+
+
+
+           >
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,10 +37,9 @@
             android:textColor="#FFFFFF"
             android:textSize="38sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_gravity="center"
+
+            />
 
 
         <LinearLayout
@@ -41,7 +50,7 @@
 
             <ImageView
                 android:layout_width="100dp"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center"
                 android:contentDescription="@string/todo"
                 android:src="@drawable/image3"
@@ -152,6 +161,7 @@
 
         </LinearLayout>
 
+        </LinearLayout>
 
     </ScrollView>
 
