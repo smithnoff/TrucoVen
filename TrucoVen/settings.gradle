@@ -1,3 +1,4 @@
 rootProject.name='TrucoVen'
 include ':app'
 include ':base'
+include ':trick'
