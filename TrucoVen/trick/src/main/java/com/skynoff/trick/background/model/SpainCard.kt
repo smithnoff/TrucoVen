@@ -1,6 +1,7 @@
 package com.skynoff.trick.background.model
 
 import com.skynoff.base.model.Card
+import com.skynoff.base.model.Mark
 import com.skynoff.base.model.Marking
 
 class SpainCard private constructor(
