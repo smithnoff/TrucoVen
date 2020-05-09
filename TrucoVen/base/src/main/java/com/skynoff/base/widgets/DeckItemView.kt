@@ -1,6 +1,7 @@
 package com.skynoff.base.widgets
 
 import android.content.Context
+import android.provider.ContactsContract
 import android.util.AttributeSet
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
@@ -8,8 +9,11 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnTouchListener
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import com.skynoff.base.R
+import com.skynoff.base.model.Card
 import com.skynoff.base.model.Deck
 import com.skynoff.base.model.Marking
 import kotlinx.android.synthetic.main.item_deck_view.view.*
@@ -18,36 +22,42 @@ import kotlinx.android.synthetic.main.item_deck_view.view.*
 class DeckItemView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
+
     init {
         LayoutInflater.from(context).inflate(R.layout.item_deck_view, this, true)
-        initMotion()
     }
 
-    private fun initMotion() {
-        this.setOnTouchListener(object : OnSwipeTouchListener(context){
+    lateinit var cardItemview: Card
+
+    private fun initMotion(card: Card) {
+        this.flipCardView.setOnTouchListener(object : OnSwipeTouchListener(context) {
+
             override fun onSwipeLeft() {
                 flipCardView.setFlipTypeFromRight()
                 flipCardView.flipTheView()
+                card.setfacing(!card_back_image.isVisible)
             }
 
             override fun onSwipeRight() {
                 flipCardView.setFlipTypeFromLeft()
                 flipCardView.flipTheView()
+                card.setfacing(!card_back_image.isVisible)
             }
+
+            override fun onClickCard() {
+                Toast.makeText(context, "estoy boca arriba: ${cardItemview.isFaceUp}", Toast.LENGTH_SHORT)
+                    .show()            }
         })
     }
 
-    fun setNumberPint(deck: Deck){
-        with(deck){
+    fun setNumberPint(card: Card) {
+        cardItemview = card
+        with(card) {
             card_up_number.text = number.toString()
             card_down_number.text = number.toString()
-            card_pint.setImageResource(when(marking){
-                is Marking.Gold -> R.drawable.gold_pint
-                is Marking.Coarse -> R.drawable.coarse_pint
-                is Marking.Cup -> R.drawable.cup_pint
-                is Marking.Sword -> R.drawable.sword_pint
-            })
+            card_pint.setImageResource(card.marking.getMarkSrc())
         }
+        initMotion(card)
     }
 }
 
@@ -56,6 +66,8 @@ open class OnSwipeTouchListener(context: Context?) :
     private val gestureDetector: GestureDetector
     open fun onSwipeLeft() {}
     open fun onSwipeRight() {}
+    open fun onClickCard() {}
+
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
         return gestureDetector.onTouchEvent(event)
     }
@@ -84,7 +96,13 @@ open class OnSwipeTouchListener(context: Context?) :
             }
             return false
         }
+
+        override fun onSingleTapConfirmed(e: MotionEvent?): Boolean {
+            onClickCard()
+            return super.onSingleTapConfirmed(e)
+        }
     }
+
     companion object {
         private const val SWIPE_DISTANCE_THRESHOLD = 100
         private const val SWIPE_VELOCITY_THRESHOLD = 100
