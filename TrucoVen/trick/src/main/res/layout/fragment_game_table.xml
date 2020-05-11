@@ -1,46 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryLightColor">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_full_deck"
+    <it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow
+        android:id="@+id/featureCoverFlow"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/card_one"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.skynoff.base.widgets.DeckItemView
-        android:id="@+id/card_one"
-        android:layout_width="140dp"
-        android:layout_height="240dp"
+        android:layout_height="wrap_content"
+        app:coverHeight="210dp"
+        app:coverWidth="140dp"
+        app:maxScaleFactor="1.5"
+        app:reflectionGap="0px"
+        app:rotationThreshold="0.5"
+        app:scalingThreshold="0.5"
+        app:spacing="0.6"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-    <com.skynoff.base.widgets.DeckItemView
-        android:id="@+id/card_two"
-        android:layout_width="140dp"
-        android:layout_height="240dp"
-        app:layout_constraintHorizontal_bias="0"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-    <com.skynoff.base.widgets.DeckItemView
-        android:id="@+id/card_three"
-        android:layout_width="140dp"
-        android:layout_height="240dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

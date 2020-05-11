@@ -15,7 +15,13 @@ class SpainCard private constructor(
 
     }
 
-    override fun getMark() {
+    override fun getMark(): SpainMark {
+        return  when(marking as SpainMarking){
+            is SpainMarking.Cup -> SpainMark.CUP
+            is SpainMarking.Gold -> SpainMark.GOLD
+            is SpainMarking.Coarse -> SpainMark.COARSE
+            is SpainMarking.Sword -> SpainMark.SWORD
+        }
     }
 
     override fun setfacing(isFaceUp: Boolean) {

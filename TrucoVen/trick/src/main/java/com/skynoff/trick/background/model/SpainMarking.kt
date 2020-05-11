@@ -5,10 +5,9 @@ import com.skynoff.base.model.Marking
 
 sealed class SpainMarking : Marking {
 
- class Cup : SpainMarking() {
-        val name: String = "Copa"
-        override fun getMarkSrc(): Int = R.drawable.cup_pint
-
+    class Cup : SpainMarking() {
+        val name: String = "cup"
+        override fun getMarkSrc(): String = name
         override fun getGameValue(value: Int): Int =
             when (value) {
                 1 -> 13
@@ -16,10 +15,9 @@ sealed class SpainMarking : Marking {
             }
     }
 
- class Gold : SpainMarking() {
-        val name: String = "Oro"
-        override fun getMarkSrc(): Int = R.drawable.gold_pint
-
+    class Gold : SpainMarking() {
+        val name: String = "gold"
+        override fun getMarkSrc(): String = name
         override fun getGameValue(value: Int): Int =
             when (value) {
                 1 -> 13
@@ -28,10 +26,9 @@ sealed class SpainMarking : Marking {
             }
     }
 
- class Coarse : SpainMarking() {
-        val name: String = "Bastos"
-        override fun getMarkSrc(): Int = R.drawable.coarse_pint
-
+    class Coarse : SpainMarking() {
+        val name: String = "coarse"
+        override fun getMarkSrc(): String = name
         override fun getGameValue(value: Int): Int =
             when (value) {
                 1 -> 18
@@ -39,10 +36,9 @@ sealed class SpainMarking : Marking {
             }
     }
 
- class Sword : SpainMarking() {
-        val name: String = "Espada"
-        override fun getMarkSrc(): Int = R.drawable.sword_pint
-
+    class Sword : SpainMarking() {
+        val name: String = "sword"
+        override fun getMarkSrc(): String = name
         override fun getGameValue(value: Int): Int =
             when (value) {
                 1 -> 19

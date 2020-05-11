@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.skynoff.base.R
 import com.skynoff.base.model.Card
 import kotlinx.android.synthetic.main.item_deck_view.view.*
-import kotlinx.android.synthetic.main.item_rank_player_view.view.*
 
 class CardViewAdapter(private val cardList: List<Card>) :
     RecyclerView.Adapter<CardViewAdapter.CardViewHolder>() {
@@ -29,10 +28,16 @@ class CardViewAdapter(private val cardList: List<Card>) :
 
     class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(card: Card) {
-            with(card){
+            with(card) {
                 itemView.card_down_number.text = number.toString()
                 itemView.card_up_number.text = number.toString()
-                itemView.card_pint.setImageResource(card.marking.getMarkSrc())
+                itemView.card_pint.setImageResource(
+                    itemView.context.resources.getIdentifier(
+                        "${card.marking.getMarkSrc()}_$number",
+                        "drawable",
+                        itemView.context.packageName
+                    )
+                )
             }
         }
     }

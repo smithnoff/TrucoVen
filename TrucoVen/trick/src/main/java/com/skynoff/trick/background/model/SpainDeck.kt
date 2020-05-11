@@ -21,9 +21,9 @@ class SpainDeck : Deck {
         }.toMutableList()
 }
 
-enum class SpainMark : Mark {
-    GOLD,
-    COARSE,
-    CUP,
-    SWORD;
+enum class SpainMark(val markName: String = "") : Mark {
+    GOLD("gold"),
+    COARSE("coarse"),
+    CUP("cup"),
+    SWORD("sword");
 }

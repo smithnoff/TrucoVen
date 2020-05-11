@@ -7,6 +7,6 @@ interface Card {
     var isFaceUp: Boolean
 
     fun getGameValue()
-    fun getMark()
+    fun getMark():Mark
     fun setfacing(isFaceUp:Boolean)
 }

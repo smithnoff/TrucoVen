@@ -45,8 +45,13 @@ class DeckItemView @JvmOverloads constructor(
             }
 
             override fun onClickCard() {
-                Toast.makeText(context, "estoy boca arriba: ${cardItemview.isFaceUp}", Toast.LENGTH_SHORT)
-                    .show()            }
+                Toast.makeText(
+                    context,
+                    "estoy boca arriba: ${cardItemview.isFaceUp}",
+                    Toast.LENGTH_SHORT
+                )
+                    .show()
+            }
         })
     }
 
@@ -55,7 +60,20 @@ class DeckItemView @JvmOverloads constructor(
         with(card) {
             card_up_number.text = number.toString()
             card_down_number.text = number.toString()
-            card_pint.setImageResource(card.marking.getMarkSrc())
+            card_pint.setImageResource(
+                context.resources.getIdentifier(
+                    "${card.marking.getMarkSrc()}_$number",
+                    "drawable",
+                    context.packageName
+                )
+            )
+            front_card_bg.setBackgroundResource(
+                context.resources.getIdentifier(
+                    "bg_${card.marking.getMarkSrc()}",
+                    "drawable",
+                    context.packageName
+                )
+            )
         }
         initMotion(card)
     }
